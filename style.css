@@ -144,7 +144,7 @@ top: 0px;
 }
 p{
     margin: 20px;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 200;
 }
 hr{
@@ -168,4 +168,165 @@ hr{
 }
 .play-img1{
     height: 100vh;
+}
+.fourth-section{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "online a-img"
+    ". a-img"
+;
+
+}
+.online{
+    grid-area: online;
+    width: 100%;
+
+}
+.a-img{
+    grid-area: a-img;
+}
+.a-svg{
+    width: 100%;
+}
+.fifth-section{
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    grid-template-rows: 1fr 3fr 6fr;
+    grid-template-areas: ". . devices"
+    "apple apple apple"
+    "letter letter letter";
+    height: 1500px;
+}
+.devices{
+    grid-area: devices;
+}
+.apple{
+    grid-area: apple;
+    height: 100px;
+}
+.letter{
+    grid-area: letter;
+    height: 800px;
+    display:inline-block;   
+   margin-left: 20%;
+}
+.sixth-section{
+   background-color: #660099;
+    
+}
+.lilu2{
+    width: 100vw;
+}
+.schedule{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "sched sched circle-img"
+    ". . mon"
+    "tue wed ."
+    ". thu ."
+    ". . fri"
+    "sat sun .";
+    gap: 15px;
+}
+.mon{
+    grid-area: mon;
+}
+.tue{
+    grid-area: tue;
+}
+.wed{
+    grid-area: wed;
+}
+.thu{
+    grid-area: thu;
+}
+.fri{
+    grid-area: fri;
+}
+.sat{
+    grid-area: sat;
+}
+.sun {
+    grid-area: sun;
+}
+h3{
+    font-size: 80px;
+}
+.sched h1{
+    font-size: 300px;
+}
+.keyboard{
+    
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    margin-top: 300px;
+}
+.public{
+    background-color: #0099ff;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "pecora live";
+padding: 15px;
+color: white;
+}
+.public hr{
+
+
+border: solid 1px white;
+}
+.pecora{
+    display: grid;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    grid-area: pecora;
+}
+.pecora-img{
+    width: 80%;
+}
+.content2{
+    grid-area: live;
+  
+}
+.content2 p {
+    font-size: 18px;
+}
+.lilu3 {
+    margin: 0px;
+    background-color: #660099;
+}
+.lilu3-img{
+    width: 100%;
+}
+.contact{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100%;
+    grid-template-areas: "contact circle-img"
+    "contact list"
+    ;
+}
+.titlecard{
+    grid-area: contact;
+}
+.contactlist{
+    margin-top: 300px;
+    margin-bottom: 100px;
+    grid-area: list;
+}
+.eye{
+    margin: 20px;
+   
+}
+.eyediv{
+    display: grid;
+    justify-items: center;
+}
+.contactlist p{
+    font-size: 39px;
 }
