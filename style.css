@@ -5,6 +5,7 @@ body * {
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
+    background-color: #ffcc00;
 }
 
 .first-section {
@@ -15,9 +16,11 @@ body {
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
     grid-template-columns: 5fr minmax(30px, 1fr) 5fr;
-    grid-template-areas: "logo . play" 
-    ". . play " 
-    "desc . play" ;
+    grid-template-areas: "logo . play"
+        ". . play "
+        "desc . play";
+
+
 }
 
 .last-section {
@@ -80,13 +83,89 @@ body {
 .logo-img {
     grid-area: logo;
     margin: 10px;
+    width: 40%;
 }
 
 .play-img {
-    margin-top: 40px;
+    margin: 0px;
     grid-area: play;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+
+
+
 }
+
 .desc {
     grid-area: desc;
     margin: 15px;
+}
+
+.second-section img {
+    width: vw;
+}
+
+.second-section {
+    background-color: #660099;
+}
+
+.third-section {
+    
+    background-color: #ffcc00;
+    display: grid;
+    grid-template-columns: 5fr 0.3fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "howto . circle-img"
+        "howto . fm1 "
+        "howto . fm1";
+
+}
+.fm1{
+    grid-area: fm1;
+    gap:10px;
+}
+.howto{
+    margin: 0px;
+    grid-area: howto;
+}
+h1{
+    font-size: 200px;
+    margin: 0px;
+}
+.howto-img{
+    height: fit-content; 
+    margin: 20px;
+    margin-top: 0px;
+    margin-top: -180px;
+position: relative;
+top: 0px;
+}
+p{
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 200;
+}
+hr{
+    border: solid black 1px;
+}
+.circle-img{
+    
+    width: 250px;
+    justify-items: right;
+    display: grid;
+    
+
+}
+.circlediv{
+    display: grid;
+    justify-content: right;
+    grid-area: circle-img;
+    margin-top: 30px;
+    margin-right: 30px;
+
+}
+.play-img1{
+    height: 100vh;
 }
