@@ -6,6 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     background-color: #ffcc00;
+    overflow-x: hidden;
 }
 
 .first-section {
@@ -14,12 +15,43 @@ body {
     /* vw sta per view width: ;  */
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 16.6%;
     grid-template-columns: 5fr minmax(30px, 1fr) 5fr;
     grid-template-areas: "logo . play"
         ". . play "
         "desc . play";
 
+
+}
+
+.play-img {
+    margin: 0px;
+    grid-area: play;
+    height: 100%;
+    max-width: 100%;
+
+
+}
+
+@media (max-width:480px) {
+
+
+    .first-section {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 1fr 4fr 16.6;
+        grid-template-areas: "logo"
+            "play "
+            "desc";
+    }
+
+    .play-img {
+        width: 200px;
+        overflow: hidden;
+        grid-area: play;
+        padding: 15px;
+
+    }
 
 }
 
@@ -45,6 +77,7 @@ body {
     width: 50vw;
     height: 50vw;
     background-color: #ff3333;
+
 }
 
 @media (max-width:480px) {
@@ -68,6 +101,19 @@ body {
         background-color: #ff3333;
     }
 
+    .first-section {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: logo play desc;
+    }
+
+    .play-img {
+        width: 200px;
+        overflow: hidden;
+        grid-area: play;
+
+    }
+
 }
 
 .mouth-img {
@@ -77,6 +123,22 @@ body {
 
 .arrow-img {
     width: 60%;
+}
+
+.arrow-img:hover {
+    animation: arrow-rotation 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrow-rotation {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
 
 }
 
@@ -86,17 +148,7 @@ body {
     width: 40%;
 }
 
-.play-img {
-    margin: 0px;
-    grid-area: play;
-    height: 100%;
-    display: grid;
-    align-items: center;
-    box-sizing: border-box;
 
-
-
-}
 
 .desc {
     grid-area: desc;
@@ -112,7 +164,7 @@ body {
 }
 
 .third-section {
-    
+
     background-color: #ffcc00;
     display: grid;
     grid-template-columns: 5fr 0.3fr 3fr;
@@ -122,43 +174,51 @@ body {
         "howto . fm1";
 
 }
-.fm1{
+
+.fm1 {
     grid-area: fm1;
-    gap:10px;
+    gap: 10px;
 }
-.howto{
+
+.howto {
     margin: 0px;
     grid-area: howto;
 }
-h1{
+
+h1 {
     font-size: 200px;
     margin: 0px;
 }
-.howto-img{
-    height: fit-content; 
+
+.howto-img {
+    height: fit-content;
     margin: 20px;
     margin-top: 0px;
     margin-top: -180px;
-position: relative;
-top: 0px;
+    position: relative;
+    top: 0px;
 }
-p{
+
+p {
     margin: 20px;
     font-size: 30px;
     font-weight: 200;
 }
-hr{
+
+hr {
     border: solid black 1px;
 }
-.circle-img{
-    
+
+.circle-img {
+
     width: 250px;
     justify-items: right;
     display: grid;
-    
+
 
 }
-.circlediv{
+
+.circlediv {
     display: grid;
     justify-content: right;
     grid-area: circle-img;
@@ -166,167 +226,226 @@ hr{
     margin-right: 30px;
 
 }
-.play-img1{
-    height: 100vh;
+
+.play-img1 {
+    height: 100%;
+
+    max-width: 100%;
 }
-.fourth-section{
+
+.fourth-section {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "online a-img"
-    ". a-img"
-;
+        ". a-img"
+    ;
 
 }
-.online{
+
+.online {
     grid-area: online;
     width: 100%;
 
 }
-.a-img{
+
+.a-img {
     grid-area: a-img;
 }
-.a-svg{
+
+.a-svg {
     width: 100%;
 }
-.fifth-section{
+
+.fifth-section {
     display: grid;
     grid-template-columns: 5fr 1fr 5fr;
     grid-template-rows: 1fr 3fr 6fr;
     grid-template-areas: ". . devices"
-    "apple apple apple"
-    "letter letter letter";
+        "apple apple apple"
+        "letter letter letter";
     height: 1500px;
 }
-.devices{
+
+.devices {
     grid-area: devices;
 }
-.apple{
+
+.apple {
     grid-area: apple;
     height: 100px;
 }
-.letter{
+
+.letter {
     grid-area: letter;
     height: 800px;
-    display:inline-block;   
-   margin-left: 20%;
+    display: inline-block;
+    margin-left: 20%;
 }
-.sixth-section{
-   background-color: #660099;
-    
+
+.sixth-section {
+    background-color: #660099;
+
 }
-.lilu2{
+
+.lilu2 {
     width: 100vw;
 }
-.schedule{
+
+.schedule {
     background-color: white;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "sched sched circle-img"
-    ". . mon"
-    "tue wed ."
-    ". thu ."
-    ". . fri"
-    "sat sun .";
+        ". . mon"
+        "tue wed ."
+        ". thu ."
+        ". . fri"
+        "sat sun .";
     gap: 15px;
 }
-.mon{
+
+.mon {
     grid-area: mon;
 }
-.tue{
+
+.tue {
     grid-area: tue;
 }
-.wed{
+
+.wed {
     grid-area: wed;
 }
-.thu{
+
+.thu {
     grid-area: thu;
 }
-.fri{
+
+.fri {
     grid-area: fri;
 }
-.sat{
+
+.sat {
     grid-area: sat;
 }
+
 .sun {
     grid-area: sun;
 }
-h3{
+
+h3 {
     font-size: 80px;
 }
-.sched h1{
+
+.sched h1 {
     font-size: 300px;
 }
-.keyboard{
-    
+
+.keyboard {
+
     display: flex;
     justify-content: center;
     align-items: bottom;
     margin-top: 300px;
 }
-.public{
+
+.public {
     background-color: #0099ff;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
     grid-template-areas: "pecora live";
-padding: 15px;
-color: white;
+    padding: 15px;
+    color: white;
 }
-.public hr{
+
+.public hr {
 
 
-border: solid 1px white;
+    border: solid 1px white;
 }
-.pecora{
+
+.pecora {
     display: grid;
     position: sticky;
     top: 0;
     width: 100%;
     grid-area: pecora;
 }
-.pecora-img{
+
+.pecora-img {
     width: 80%;
 }
-.content2{
+
+.content2 {
     grid-area: live;
-  
+
 }
+
 .content2 p {
     font-size: 18px;
 }
+
 .lilu3 {
     margin: 0px;
     background-color: #660099;
 }
-.lilu3-img{
+
+.lilu3-img {
     width: 100%;
 }
-.contact{
+
+.contact {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100%;
     grid-template-areas: "contact circle-img"
-    "contact list"
+        "contact list"
     ;
 }
-.titlecard{
+
+.titlecard {
     grid-area: contact;
 }
-.contactlist{
+
+.contactlist {
     margin-top: 300px;
     margin-bottom: 100px;
     grid-area: list;
 }
-.eye{
+
+.eye {
     margin: 20px;
-   
+
 }
-.eyediv{
+
+.eyediv {
     display: grid;
     justify-items: center;
 }
-.contactlist p{
+
+.contactlist p {
     font-size: 39px;
+}
+
+h4 {
+    font-size: 50px;
+    margin: 0px;
+}
+
+.row {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 32px;
+}
+
+.row-flex {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.row-title {
+    font-size: 100px;
+    margin: 0;
 }
